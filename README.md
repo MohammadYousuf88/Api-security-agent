@@ -1,30 +1,25 @@
- 🛡️ AI-Powered API Security Agent CLI
+# API Security Agent 🛡️
 
-An automated command-line tool designed to audit OpenAPI specifications for security vulnerabilities before deployment. By pairing static spec parsing with AI risk analysis via OpenRouter, the agent automatically identifies unauthenticated or misconfigured endpoints and outputs detailed security reports.
+[![API Security Audit](https://github.com/MohammadYousuf88/api-security-agent/actions/workflows/api-security-audit.yml/badge.svg)](https://github.com/MohammadYousuf88/api-security-agent/actions/workflows/api-security-audit.yml)
 
----
-
- 🎯 Key Features & Value
-
-* **Shift-Left Security:** Catches missing authentication and potential security oversights at the specification stage before code goes live.
-* **Automated AI Risk Evaluation:** Leverages LLM intelligence to analyze route paths, methods, parameters, and authentication statuses for context-aware risk reasoning.
-* **Rich Terminal Interface:** Displays scan findings in a clear, formatted terminal table using `rich`.
-* **Exportable Audit Reports:** Generates structured JSON reports (`report.json`) for audit compliance and integration into security pipelines.
+A 100% local, zero-data-leakage API security scanner built for CI/CD pipelines.
 
 ---
 
- 🏗️ How It Works
+## Why API Security Agent?
+Enterprise development teams are terrified of sending proprietary API code and endpoints to external third-party cloud security scanners. **API Security Agent** solves this by running completely locally on your infrastructure with **Bring-Your-Own-Key (BYOK)** OpenAI integration. 
 
-1. **Parser (`parser.py`):** Reads OpenAPI (JSON/YAML) files and extracts endpoints into structured models (`RouteEndpoint`).
-2. **Analyzer (`analyzer.py`):** Evaluates endpoint parameters and authentication status against an AI model on OpenRouter.
-3. **CLI Interface (`main.py`):** Coordinates parsing, AI analysis, terminal rendering, and file export via `typer`.
+* **Zero Data Leakage:** Your code and API specs never touch third-party analytical training servers.
+* **Shift-Left Security:** Catch vulnerabilities and bad configurations early in development before they reach production.
+* **Automated CI/CD:** Plug it straight into GitHub Actions to scan on every single push.
 
 ---
 
-🚀 Quickstart Guide
+## Quickstart Guide
 
- 1. Prerequisites
-Ensure you have Python 3.9+ installed and your virtual environment activated:
+Get your first security audit running in 10 seconds:
 
-```powershell
-.\venv\Scripts\activate
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/MohammadYousuf88/api-security-agent.git](https://github.com/MohammadYousuf88/api-security-agent.git)
+   cd api-security-agent

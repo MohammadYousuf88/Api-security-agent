@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/public/status",
+    "method": "GET",
+    "has_auth": false,
+    "analysis": {
+      "flagged": false,
+      "reasoning": "No API key provided.",
+      "test_payload_headers": {}
+    }
+  },
+  {
+    "path": "/user/profile",
+    "method": "GET",
+    "has_auth": true,
+    "analysis": {
+      "flagged": false,
+      "reasoning": "No API key provided.",
+      "test_payload_headers": {}
+    }
+  },
+  {
+    "path": "/admin/settings",
+    "method": "POST",
+    "has_auth": false,
+    "analysis": {
+      "flagged": false,
+      "reasoning": "No API key provided.",
+      "test_payload_headers": {}
+    }
+  }
+]

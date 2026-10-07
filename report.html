@@ -1,0 +1,81 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>API Security Audit Report</title>
+        <style>
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 40px; }
+            .container { max-width: 1100px; margin: 0 auto; background: #1e293b; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+            h1 { color: #38bdf8; margin-bottom: 5px; }
+            p.sub { color: #94a3b8; margin-top: 0; margin-bottom: 30px; }
+            .summary-cards { display: flex; gap: 20px; margin-bottom: 30px; }
+            .card { flex: 1; background: #334155; padding: 20px; border-radius: 8px; text-align: center; }
+            .card h3 { margin: 0; font-size: 28px; color: #38bdf8; }
+            .card p { margin: 5px 0 0 0; color: #cbd5e1; font-size: 14px; }
+            table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+            th, td { padding: 14px; text-align: left; border-bottom: 1px solid #475569; }
+            th { background-color: #0f172a; color: #94a3b8; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+            .method { font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+            .get { background: #0284c7; color: white; }
+            .post { background: #16a34a; color: white; }
+            .badge { font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: bold; }
+            .badge-danger { background: #ef4444; color: white; }
+            .badge-success { background: #22c55e; color: white; }
+            .badge-warning { background: #f59e0b; color: white; }
+            .badge-info { background: #3b82f6; color: white; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🛡️ API Security Audit Dashboard</h1>
+            <p class="sub">Automated AI Risk Assessment & Vulnerability Report</p>
+            
+            <div class="summary-cards">
+                <div class="card"><h3>3</h3><p>Endpoints Scanned</p></div>
+                <div class="card"><h3 style="color: #ef4444;">0</h3><p>Flagged Vulnerabilities</p></div>
+                <div class="card"><h3 style="color: #22c55e;">100%</h3><p>Security Compliance Score</p></div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Endpoint Path</th>
+                        <th>Authentication</th>
+                        <th>Security Status</th>
+                        <th>AI Risk Reasoning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td><span class="method get">GET</span></td>
+            <td><code>/public/status</code></td>
+            <td><span class="badge badge-warning">MISSING</span></td>
+            <td><span class="badge badge-success">SECURE</span></td>
+            <td>No API key provided.</td>
+        </tr>
+        
+        <tr>
+            <td><span class="method get">GET</span></td>
+            <td><code>/user/profile</code></td>
+            <td><span class="badge badge-info">ENABLED</span></td>
+            <td><span class="badge badge-success">SECURE</span></td>
+            <td>No API key provided.</td>
+        </tr>
+        
+        <tr>
+            <td><span class="method post">POST</span></td>
+            <td><code>/admin/settings</code></td>
+            <td><span class="badge badge-warning">MISSING</span></td>
+            <td><span class="badge badge-success">SECURE</span></td>
+            <td>No API key provided.</td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+    </body>
+    </html>
+    

@@ -1,0 +1,37 @@
+name: API Security Audit
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install API Security Agent
+        run: |
+          python -m pip install --upgrade pip
+          pip install api-security-agent
+
+      - name: Run Local Security Audit
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          api-security-agent scan --target ./src --output report.html
+
+      - name: Upload Security Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-security-report
+          path: report.html
